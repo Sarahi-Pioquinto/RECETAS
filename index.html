@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Cheff</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <h1>Home Cheff</h1>
+        <input type="text" id="ingredientInput" placeholder="Buscar por ingredientes...">
+        <button id="searchButton">Buscar</button>
+    </header>
+
+    <div class="toolbar">
+        <i class="fi fi-rr-home"><img class="icon home-icon" src="icons/hogar.png" alt="Home"></i>
+        <i class="fi fi-rr-saved"><img class="icon saved-icon" src="icons/disco.png" alt="Guardadas"></i>
+    </div>
+
+    <h2>Recetas populares</h2>
+    <section id="carousel">
+        <div id="carouselContainer"></div>
+    </section>
+
+    <section id="recipes">
+        <h2>Resultados de búsqueda</h2>
+        <div id="recipeList"></div>
+    </section>
+
+    <section id="recipeDetails" style="display: none;">
+        <img class="rec-img" id="recipeImage" alt="Recipe Image">
+        <h2 id="recipeTitle"></h2>
+        <h3 style="text-align: left;">Ingredientes</h3>
+        <ul class="ingredientes" id="ingredientList"></ul>
+        <h3 style="text-align: left;" >A cocinar</h3>
+        <p id="instructions"></p>
+        <button onclick="closeRecipeDetails()">Cerrar</button>
+    </section>
+    
+    <section id="saved" style="display: none;">
+        <h2>Guardadas</h2>
+        <div id="savedRecipesList"></div>
+        <button onclick="closeRecipeDetails()">Cerrar</button>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+<footer>
+    <h1>Home Cheff</h1>
+</footer>
+</html>
