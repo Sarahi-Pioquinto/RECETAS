@@ -123,3 +123,57 @@ h3 {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+#recipeDetails {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#recipeImage {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#recipeTitle {
+    font-size: 1.8em;
+    color: #6ED1EB;
+    margin-bottom: 10px;
+}
+
+#ingredientList {
+    text-align: left;
+    list-style-type: circle;
+    margin: 0 auto 20px auto;
+    max-width: 400px;
+}
+
+#instructions {
+    text-align: justify;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background: #6ED1EB;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #5bb1d4;
+}
