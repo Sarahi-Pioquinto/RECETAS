@@ -16,8 +16,9 @@ function displayCarousel() {
             carouselContainer.innerHTML = data.meals.slice(0, 5).map(meal => `
                 <div class="recipe-card">
                     <h3>${meal.strMeal}</h3>
-                    <img class="img-popular" src="${meal.strMealThumb}" alt="${meal.strMeal}">
+                    <img class="img-popular" src="${meal.strMealThumb}" alt="${meal.strMeal}"<br><br>
                     <button onclick="viewRecipe('${meal.idMeal}')">Ver Receta</button>
+                     <button class="saveButton" onclick="saveRecipe('${meal.idMeal}', '${meal.strMeal}', '${meal.strMealThumb}')">Save</button>
                 </div>
             `).join('');
         });
