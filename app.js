@@ -1,3 +1,13 @@
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+        .then((registration) => {
+            console.log('Service Worker registrado con éxito:', registration.scope);
+        })
+        .catch((error) => {
+            console.error('Error al registrar el Service Worker:', error);
+        });
+}
+
 const baseUrl = 'https://www.themealdb.com/api/json/v1/1';
 const savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
 
@@ -18,7 +28,6 @@ function displayCarousel() {
                     <h3>${meal.strMeal}</h3>
                     <img class="img-popular" src="${meal.strMealThumb}" alt="${meal.strMeal}"<br><br>
                     <button onclick="viewRecipe('${meal.idMeal}')">Ver Receta</button>
-                     <button class="saveButton" onclick="saveRecipe('${meal.idMeal}', '${meal.strMeal}', '${meal.strMealThumb}')">Save</button>
                 </div>
             `).join('');
         });
