@@ -128,7 +128,7 @@ function displaySavedRecipes() {
         <div class="recipe-card">
             <h3>${recipe.title}</h3>
             <img class="img-popular" src="${recipe.image}" alt="${recipe.title}">
-            <p>${recipe.instructions}</p>
+           
             <button onclick="viewRecipe('${recipe.id}')">Ver Receta</button>
         </div>
     `).join('');
